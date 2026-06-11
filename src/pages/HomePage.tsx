@@ -221,7 +221,7 @@ export function HomePage() {
     <div ref={containerRef} className="relative w-full overflow-hidden pb-16">
       
       {/* 1. Hero Section */}
-      <section className="relative min-h-[65vh] flex flex-col items-center justify-center px-4 pt-24 pb-8 mt-16 z-10 max-w-7xl mx-auto">
+      <section className="relative min-h-[65vh] flex flex-col items-center justify-center px-4 pt-16 pb-8 mt-16 z-10 max-w-7xl mx-auto">
         
         {/* Draggable Stickers (desktop & mobile drag-friendly) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
