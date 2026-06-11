@@ -420,7 +420,7 @@ export function HomePage() {
 
           {/* Right Column: Preview cards stack */}
           <div className="col-span-12 lg:col-span-5 flex flex-col items-end justify-center mt-8 lg:mt-0 hero-cards">
-            <div className="relative w-full max-w-[360px]">
+            <div className="relative w-full max-w-[360px] mb-8">
               {/* 1. Main Card Preview */}
               <div className="relative z-20">
                 <ConfessionCard confession={mockHeroConfession} />
