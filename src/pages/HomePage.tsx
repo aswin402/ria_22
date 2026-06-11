@@ -457,7 +457,7 @@ export function HomePage() {
       </section>
 
       {/* 2. Meet RIA Section */}
-      <section className="max-w-4xl mx-auto px-6 pt-24 pb-12 relative z-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 pt-24 pb-12 relative z-10">
         <div className="torn-paper p-8 sm:p-12 md:grid md:grid-cols-5 gap-8 items-center">
           <div className="md:col-span-2 flex justify-center mb-6 md:mb-0 relative">
             {/* Washi Tape */}
@@ -500,7 +500,7 @@ export function HomePage() {
       </section>
 
       {/* 3. Latest Confessions */}
-      <section className="max-w-4xl mx-auto px-6 py-12 relative z-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 py-12 relative z-10">
         <div className="mb-10 flex items-baseline justify-between border-b border-border/30 pb-3">
           <div>
             <span className="font-script text-primary text-3xl block">The ledger of shame</span>
@@ -522,7 +522,7 @@ export function HomePage() {
       </section>
 
       {/* 4. Things RIA Has Noticed (Collage Style) */}
-      <section className="max-w-6xl mx-auto px-6 py-12 relative z-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 py-12 relative z-10">
         <div className="text-center mb-10">
           <span className="font-script text-primary text-4xl block">Stats on paper</span>
           <h2 className="text-3xl font-heading text-foreground font-normal">Things RIA Has Noticed</h2>
@@ -791,7 +791,7 @@ export function HomePage() {
       </section>
 
       {/* 6. Bottom Call to Action */}
-      <section className="max-w-4xl mx-auto px-6 py-12 text-center relative z-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 py-12 text-center relative z-10">
         <div className="torn-paper p-8 sm:p-12">
           <div className="washi-tape washi-tape-pink absolute -top-3 left-[40%]" style={{ '--tape-rotation': '-2deg', width: '120px' } as React.CSSProperties} />
           
