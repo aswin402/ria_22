@@ -237,7 +237,7 @@ export function HomePage() {
           />
         </div>
 
-        <div className="grid grid-cols-12 gap-8 items-center w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 text-left relative z-10">
+        <div className="grid grid-cols-12 gap-8 items-center w-full max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 text-left relative z-10">
           
           {/* Left Column: Stacked Title */}
           <div className="col-span-12 lg:col-span-7 flex flex-col items-start justify-center relative">

@@ -35,7 +35,7 @@ export function Navbar() {
         ? 'bg-background/85 backdrop-blur-md border-b border-border/20 shadow-sm' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto w-full h-full flex items-center justify-between px-4 sm:px-6 md:px-8">
+      <div className="max-w-7xl mx-auto w-full h-full flex items-center justify-between px-4 sm:px-6 xl:px-0">
         {/* CT Logo */}
         <Link
           to="/"
