@@ -221,7 +221,7 @@ export function HomePage() {
     <div ref={containerRef} className="relative w-full overflow-hidden pb-16">
       
       {/* 1. Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col items-center justify-center px-4 pt-16 pb-24 mt-16 z-10 w-full">
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 pt-24 pb-20 mt-16 z-10 w-full">
         
         {/* Draggable Stickers (desktop & mobile drag-friendly) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
@@ -237,7 +237,7 @@ export function HomePage() {
             loop 
             muted 
             playsInline 
-            className="w-full h-full object-cover object-bottom opacity-85"
+            className="w-full h-full object-cover opacity-85"
           />
         </div>
 
