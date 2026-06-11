@@ -60,8 +60,8 @@ export function Navbar() {
               to={link.path}
               className={`font-heading text-sm px-4 py-1.5 rounded-full transition-all tracking-wide ${
                 isActive(link.path)
-                  ? 'bg-[#FFE2E7] text-[#C38B8B] font-semibold border border-[#EAA8B6]/30 shadow-sm'
-                  : 'text-[#C38B8B]/70 hover:text-[#C38B8B] hover:bg-[#FFE2E7]/20'
+                  ? 'bg-[#FFE2E7] text-[#C38B8B] font-bold border border-[#EAA8B6]/30 shadow-sm'
+                  : 'text-[#ecb2b2] font-bold hover:text-[#C38B8B] hover:bg-[#FFE2E7]/20'
               }`}
             >
               {link.name}
@@ -99,8 +99,8 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className={`font-heading text-base px-4 py-2.5 rounded-full transition-all ${
                 isActive(link.path)
-                  ? 'bg-[#FFE2E7] text-[#C38B8B] font-semibold border border-[#EAA8B6]/30 pl-5'
-                  : 'hover:bg-[#FFE2E7]/20 text-[#C38B8B]/80'
+                  ? 'bg-[#FFE2E7] text-[#C38B8B] font-bold border border-[#EAA8B6]/30 pl-5'
+                  : 'text-[#ecb2b2] font-bold hover:bg-[#FFE2E7]/20'
               }`}
             >
               {link.name}
