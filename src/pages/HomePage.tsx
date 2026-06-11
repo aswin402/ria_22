@@ -457,7 +457,7 @@ export function HomePage() {
       </section>
 
       {/* 2. Meet RIA Section */}
-      <section className="max-w-4xl mx-auto px-6 py-12 relative z-10">
+      <section className="max-w-4xl mx-auto px-6 pt-24 pb-12 relative z-10">
         <div className="torn-paper p-8 sm:p-12 md:grid md:grid-cols-5 gap-8 items-center">
           <div className="md:col-span-2 flex justify-center mb-6 md:mb-0 relative">
             {/* Washi Tape */}
