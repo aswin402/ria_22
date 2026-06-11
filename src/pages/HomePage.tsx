@@ -237,7 +237,7 @@ export function HomePage() {
             loop 
             muted 
             playsInline 
-            className="w-full h-full object-cover opacity-85"
+            className="w-full h-full object-cover object-bottom opacity-85"
           />
         </div>
 
