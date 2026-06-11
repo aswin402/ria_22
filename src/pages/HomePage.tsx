@@ -400,6 +400,16 @@ export function HomePage() {
                 CT CONFESSIONS
               </p>
 
+              {/* CONFESS NOW Button */}
+              <div className="mt-8 select-none">
+                <Link 
+                  to="/confess" 
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-[#EAA8B6] to-[#C38B8B] hover:opacity-90 hover:shadow-lg text-white font-sans font-black text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md active:scale-95 transition-all"
+                >
+                  CONFESS NOW
+                </Link>
+              </div>
+
               {/* 12K Sticker Badge overlapping RIA */}
               <div className="absolute -top-12 -right-6 w-24 h-24 rounded-full bg-[#FF8093] text-white flex flex-col justify-center items-center text-center shadow-lg rotate-[12deg] z-20 select-none border border-white/20 hero-sticker">
                 <span className="text-2xl font-sans font-black leading-none">12K</span>
@@ -408,7 +418,7 @@ export function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Preview cards stack & CTA */}
+          {/* Right Column: Preview cards stack */}
           <div className="col-span-12 lg:col-span-5 flex flex-col items-end justify-center mt-8 lg:mt-0 hero-cards">
             <div className="relative w-full max-w-[360px]">
               {/* 1. Main Card Preview */}
@@ -423,16 +433,6 @@ export function HomePage() {
                   clipPath: 'polygon(2% 1%, 97% 2%, 99% 97%, 1% 98%)',
                 }}
               />
-            </div>
-
-            {/* CONFESS NOW Button below card stack */}
-            <div className="mt-6 flex justify-end w-full max-w-[360px] select-none">
-              <Link 
-                to="/confess" 
-                className="inline-flex items-center justify-center bg-gradient-to-r from-[#EAA8B6] to-[#C38B8B] hover:opacity-90 hover:shadow-lg text-white font-sans font-black text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md active:scale-95 transition-all"
-              >
-                CONFESS NOW
-              </Link>
             </div>
           </div>
         </div>
