@@ -225,7 +225,6 @@ export function HomePage() {
         
         {/* Draggable Stickers (desktop & mobile drag-friendly) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
-          <Sticker type="cat" defaultPosition={{ x: 80, y: 140 }} rotation={-12} className="pointer-events-auto hidden md:block" />
           <Sticker type="approved" defaultPosition={{ x: 860, y: 530 }} rotation={-10} className="pointer-events-auto hidden md:block" />
         </div>
 
