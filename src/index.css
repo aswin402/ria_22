@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sacramento&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Courier Prime', 'Courier New', monospace;
+  --font-cursive: 'Sacramento', 'Caveat', cursive;
+  --font-sans: 'Outfit', sans-serif;
+
+  --color-background: oklch(var(--background));
+  --color-foreground: oklch(var(--foreground));
+
+  --color-primary: oklch(var(--primary));
+  --color-primary-foreground: oklch(var(--primary-foreground));
+
+  --color-secondary: oklch(var(--secondary));
+  --color-secondary-foreground: oklch(var(--secondary-foreground));
+
+  --color-muted: oklch(var(--muted));
+  --color-muted-foreground: oklch(var(--muted-foreground));
+
+  --color-accent: oklch(var(--accent));
+  --color-accent-foreground: oklch(var(--accent-foreground));
+
+  --color-destructive: oklch(var(--destructive));
+  --color-destructive-foreground: oklch(var(--destructive-foreground));
+
+  --color-border: oklch(var(--border));
+  --color-input: oklch(var(--input));
+  --color-ring: oklch(var(--ring));
+
+  --radius-lg: 0.5rem;
+  --radius-md: 0.25rem;
+  --radius-sm: 0.125rem;
+}
+
+:root {
+  /* Soft warm cream #FAF7F0, Sepia brown text #3E3830, Dusty Rose Pink #D48C9C */
+  --background: 0.97 0.013 85;
+  --foreground: 0.25 0.02 65;
+  
+  --card: 0.99 0.005 85;
+  --card-foreground: 0.25 0.02 65;
+  
+  --popover: 0.99 0.005 85;
+  --popover-foreground: 0.25 0.02 65;
+  
+  --primary: 0.72 0.15 15;
+  --primary-foreground: 0.99 0.005 85;
+  
+  --secondary: 0.88 0.06 85;
+  --secondary-foreground: 0.25 0.02 65;
+  
+  --muted: 0.95 0.015 85;
+  --muted-foreground: 0.45 0.02 65;
+  
+  --accent: 0.92 0.04 15;
+  --accent-foreground: 0.72 0.15 15;
+  
+  --destructive: 0.6 0.15 20;
+  --destructive-foreground: 0.99 0.005 85;
+  
+  --border: 0.75 0.02 75;
+  --input: 0.95 0.013 85;
+  --ring: 0.72 0.15 15;
+}
+
+@layer base {
+  * {
+    @apply border-current;
+    /* Custom sepia/rose scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: oklch(var(--primary)) oklch(var(--accent));
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body overflow-x-hidden;
+    background-image: 
+      radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0),
+      radial-gradient(rgba(0, 0, 0, 0.02) 1.5px, transparent 0);
+    background-size: 24px 24px, 48px 48px;
+    background-position: 0 0, 12px 12px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-normal tracking-tight;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary/40 ring-offset-2 ring-offset-background;
+  }
+}
+
+/* Custom Webkit scrollbar for Chrome/Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(var(--accent));
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--primary));
+  border: 2px solid oklch(var(--accent));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.65 0.15 15);
+}
+
+/* Scrapbook Button Styles */
+.scrapbook-btn, .scrapbook-btn-primary, .scrapbook-btn-secondary, .scrapbook-btn-ghost {
+  @apply relative inline-flex items-center justify-center font-heading font-medium text-sm px-6 py-2.5 border border-border bg-white text-foreground transition-all duration-200 shadow-[2px_2px_0px_rgba(0,0,0,0.05)] hover:shadow-[3px_3px_0px_rgba(0,0,0,0.08)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-accent/20 active:translate-x-0 active:translate-y-0 active:shadow-sm;
+}
+
+.scrapbook-btn-primary {
+  @apply bg-primary text-primary-foreground border-primary hover:bg-primary/95 hover:text-white;
+}
+
+.scrapbook-btn-secondary {
+  @apply bg-secondary text-secondary-foreground border-border/60 hover:bg-secondary/80;
+}
+
+.scrapbook-btn-ghost {
+  @apply border-transparent bg-transparent shadow-none hover:shadow-none hover:bg-accent/10 hover:-translate-y-0 hover:-translate-x-0;
+}
+
+/* Polaroid Photo Style */
+.polaroid {
+  background: #ffffff;
+  padding: 14px 14px 32px 14px;
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.05),
+    0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(198, 177, 149, 0.35);
+  transform: rotate(var(--polaroid-rotation, 2deg));
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, z-index 0s;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.04);
+  box-shadow: 
+    0 20px 35px -5px rgba(0, 0, 0, 0.08),
+    0 12px 15px -6px rgba(0, 0, 0, 0.06);
+  z-index: 30;
+}
+
+/* Washi Tape styling */
+.washi-tape {
+  position: absolute;
+  width: 95px;
+  height: 26px;
+  background-color: rgba(240, 226, 205, 0.55);
+  backdrop-filter: blur(1.5px);
+  border-left: 2px dashed rgba(255, 255, 255, 0.45);
+  border-right: 2px dashed rgba(255, 255, 255, 0.45);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transform: rotate(var(--tape-rotation, -8deg));
+  z-index: 25;
+  pointer-events: none;
+}
+.washi-tape-pink {
+  background-color: rgba(222, 175, 185, 0.5);
+}
+.washi-tape-blue {
+  background-color: rgba(186, 207, 217, 0.5);
+}
+
+/* Notebook paper patterns */
+.notebook-paper {
+  background-color: #fafaf6;
+  background-image: 
+    linear-gradient(#f0e2cd 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 140, 156, 0.15) 1px, transparent 1px);
+  background-size: 100% 26px, 100% 100%;
+  background-position: 0 10px, 40px 0;
+  border-left: 2px solid rgba(212, 140, 156, 0.25);
+  padding-left: 55px;
+}
+
+/* Torn paper effect */
+.torn-paper {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(198, 177, 149, 0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+/* Sticker visual enhancements */
+.sticker-container {
+  display: inline-block;
+  cursor: grab;
+}
+.sticker-container:active {
+  cursor: grabbing;
+}
+
+.sticker-peel {
+  filter: drop-shadow(3px 4px 6px rgba(0,0,0,0.08));
+  transition: transform 0.15s ease;
+}
+
+.sticker-peel:hover {
+  transform: scale(1.05) rotate(var(--sticker-hover-rotation, 2deg));
+}
+
+/* Custom cursive signature text */
+.font-script {
+  font-family: 'Sacramento', cursive;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+/* Scribbles and annotations */
+.scribble-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q50,0 100,5 Q50,10 0,5 Z' fill='%23D48C9C' opacity='0.5'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+}
+
+/* Speech Bubble for RIA (sassy scrapbook version) */
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid oklch(var(--border));
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.speech-bubble::after, .speech-bubble::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  width: 0;
+  height: 0;
+}
+
+.speech-bubble-bottom::after {
+  top: 100%;
+  border: 8px solid transparent;
+  border-top-color: #ffffff;
+  margin-left: -8px;
+  z-index: 2;
+}
+
+.speech-bubble-bottom::before {
+  top: 100%;
+  border: 9px solid transparent;
+  border-top-color: oklch(var(--border));
+  margin-left: -9px;
+  z-index: 1;
+}
+
+.speech-bubble-left::after {
+  right: 100%;
+  top: 24px;
+  border: 8px solid transparent;
+  border-right-color: #ffffff;
+  margin-top: -8px;
+  z-index: 2;
+}
+
+.speech-bubble-left::before {
+  right: 100%;
+  top: 24px;
+  border: 9px solid transparent;
+  border-right-color: oklch(var(--border));
+  margin-top: -9px;
+  z-index: 1;
+}
+
+/* Custom Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 25s linear infinite;
+}

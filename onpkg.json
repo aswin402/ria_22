@@ -1,0 +1,60 @@
+{
+  "agent_instructions": {
+    "active_skills": [
+      "react.md",
+      "vite.md",
+      "prd.md",
+      "design.md",
+      "content.md"
+    ],
+    "docs_directory": "onpkg_docs/"
+  },
+  "architecture": {
+    "components": "src/components",
+    "entrypoint": "src/main.tsx",
+    "routing": "src/pages",
+    "styles": "src/index.css"
+  },
+  "packages": {
+    "added_by_agent": [],
+    "core": [
+      "@fontsource-variable/inter",
+      "@hookform/resolvers",
+      "@lordicon/react",
+      "@tailwindcss/vite",
+      "@tanstack/react-query",
+      "axios",
+      "class-variance-authority",
+      "clsx",
+      "framer-motion",
+      "gsap",
+      "lenis",
+      "lottie-react",
+      "lottie-web",
+      "lucide-react",
+      "radix-ui",
+      "react",
+      "react-dom",
+      "react-hook-form",
+      "react-router-dom",
+      "shadcn",
+      "tailwind-merge",
+      "tailwindcss",
+      "tw-animate-css",
+      "zod",
+      "zustand"
+    ]
+  },
+  "project": {
+    "name": "my-project",
+    "package_manager": "bun",
+    "runtime": "bun",
+    "stack": "react-vite-gsap"
+  },
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  }
+}
