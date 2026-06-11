@@ -223,10 +223,7 @@ export function HomePage() {
       {/* 1. Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 pt-10 pb-32 mt-4 z-10 w-full">
         
-        {/* Draggable Stickers (desktop & mobile drag-friendly) */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
-          <Sticker type="approved" defaultPosition={{ x: 860, y: 530 }} rotation={-10} className="pointer-events-auto hidden md:block" />
-        </div>
+
 
         {/* Background Video */}
         <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none hero-video">
