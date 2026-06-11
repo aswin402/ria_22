@@ -441,7 +441,7 @@ export function HomePage() {
         </div>
 
         {/* Diagonal Marquee (acting as hero footer, overlapping the bottom of the video) */}
-        <div className="absolute bottom-[-58px] left-[-20%] right-[-20%] z-20 w-[140%] overflow-hidden h-20 flex items-center justify-center pointer-events-none">
+        <div className="absolute bottom-[-52px] left-[-20%] right-[-20%] z-20 w-[140%] overflow-hidden h-20 flex items-center justify-center pointer-events-none">
           <div 
             className="absolute w-full bg-[oklch(0.7196_0.1499_14.95)] border-y-2 border-dashed border-[#3E3830]/25 py-2.5 shadow-[0_4px_15px_rgba(0,0,0,0.06)] rotate-[-1.5deg] transform"
             style={{ backdropFilter: 'blur(1px)' }}
