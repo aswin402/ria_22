@@ -396,8 +396,15 @@ export function HomePage() {
                 CT CONFESSIONS
               </p>
 
+              {/* Tagline description */}
+              <p className="text-xs sm:text-sm font-body text-[#8C6D6D]/80 mt-2 select-none uppercase tracking-widest leading-relaxed max-w-sm">
+                anonymous crypto confessions.<br />
+                public embarrassment.<br />
+                potential rewards.
+              </p>
+
               {/* CONFESS NOW Button */}
-              <div className="mt-8 select-none">
+              <div className="mt-6 select-none">
                 <Link 
                   to="/confess" 
                   className="inline-flex items-center justify-center bg-gradient-to-r from-[#EAA8B6] to-[#C38B8B] hover:opacity-90 hover:shadow-lg text-white font-sans font-black text-xs sm:text-sm uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md active:scale-95 transition-all"
